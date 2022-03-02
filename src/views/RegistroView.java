@@ -13,8 +13,6 @@ import utils.Almacen;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 import java.awt.event.ActionEvent;
 import javax.swing.JPasswordField;
 import java.awt.Color;
@@ -27,7 +25,6 @@ public class RegistroView {
 	private JPasswordField pfPIN;
 	private JLabel lblFondo;
 	private JLabel lblPin;
-	private Farmaceutico usuario;
 	private JPasswordField pfPIN2;
 	private JLabel lblPin2;
 	private JButton btnVolver;

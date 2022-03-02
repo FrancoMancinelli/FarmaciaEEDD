@@ -7,7 +7,6 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 
-import models.Farmaceutico;
 import utils.Almacen;
 
 import javax.swing.ImageIcon;
@@ -27,7 +26,6 @@ public class LoginView {
 	private JPasswordField pfPIN;
 	private JLabel lblFondo;
 	private JLabel lblPin;
-	private Farmaceutico usuario;
 	private JButton btnRegistro;
 
 
