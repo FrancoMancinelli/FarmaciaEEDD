@@ -128,6 +128,12 @@ public class RegistroView {
 	}
 	
 	// ~~~ MÉTODOS
+	/**
+	 * Comprueba si las claves son iguales
+	 * @param pin1 Primer PIN a comparar
+	 * @param pin2 Segundo PIN a comparar
+	 * @return True en caso de que sean iguales | False en caso contrario
+	 */
 	public boolean igualdadClaves(String pin1, String pin2) {
 		if(pin1.equals(pin2))
 			return true;
@@ -135,12 +141,24 @@ public class RegistroView {
 		
 	}
 	
+	/**
+	 * Comprueba si algun campo del registro esta vacio
+	 * @param pin1 Campo del PIN1
+	 * @param pin2 Campo del PIN2
+	 * @return True si alguno esta vacio | False en caso contrario
+	 */
 	public boolean hayVacios(String pin1, String pin2) {
 		if(pin1.isEmpty() || pin2.isEmpty()) 
 			return true;
 		return false;
 	}
 	
+	/**
+	 * Comprueba si es posible realizar un registro
+	 * @param pin1 El PIN
+	 * @param pin2 El PIN de confirmación
+	 * @return True en caso de poder realizar el registro | False en caso contrario
+	 */
 	public boolean registroValido(String pin1, String pin2) {
 		if(!hayVacios(pin1, pin2)) {
 			if(igualdadClaves(pin1, pin2)) {
@@ -154,6 +172,9 @@ public class RegistroView {
 		return false;
 	}
 	
+	/**
+	 * Método que cierra la pestaña de registro y devuelve al LoginView
+	 */
 	public void devuelveLogin() {
 		frame.dispose();
 		loginView.setVisible(true);

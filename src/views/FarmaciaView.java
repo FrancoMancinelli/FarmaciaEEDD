@@ -495,6 +495,11 @@ public class FarmaciaView {
 		}		
 	}
 	
+	/**
+	 * Método que devuelve el total de unidades en stock luego de realizar un pedido
+	 * @param cantidad Cantidad a pedir
+	 * @return El total nuevo en stock
+	 */
 	private int ingresaPedido(int cantidad) {
 		int cantActual = medicamento.getCantidad();
 		int cantPedida = cantidad;
@@ -502,6 +507,11 @@ public class FarmaciaView {
 		return cantTotal;	
 	}
 	
+	/**
+	 * Método que devuelve el total de unidades en stock luego de realizar una venta
+	 * @param cantidad Cantidad a vender
+	 * @return El total restante en stock
+	 */
 	private int realizaVenta(int cantidad) {
 		int cantActual = medicamento.getCantidad();
 		int cantVendida = cantidad;
@@ -509,6 +519,11 @@ public class FarmaciaView {
 		return cantTotal;	
 	}
 	
+	/**
+	 * Método que comprueba si la cantidad en stock es distinta a 0
+	 * @param cantidad La cantidad en stock
+	 * @return True si hay unidades | False en caso contrario
+	 */
 	private boolean hayStock(int cantidad) {
 		if(cantidad == 0)
 			return false;
